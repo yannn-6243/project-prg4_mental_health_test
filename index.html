@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cek Kesehatan Mental – SDG 3</title>
+
+  <!-- Tailwind (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom styles for nav indicator, blobs, buttons, transitions -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen bg-gradient-to-b from-emerald-100 via-emerald-50 to-white">
+
+  <!-- Header -->
+ <header class="sticky top-0 z-40 bg-emerald-50/80 backdrop-blur border-b border-emerald-200">
+
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <div class="w-6 h-6 rounded-full bg-gradient-to-br from-emerald-400 via-emerald-500 to-emerald-700 flex items-center justify-center text-xs text-white shadow-md">
+          ♥
+        </div>
+        <span class="font-semibold tracking-tight text-sm sm:text-base">
+          SDG 3 – Good Health & Well-Being
+        </span>
+      </div>
+
+      <nav id="mainNav" class="relative flex gap-2 text-sm sm:text-[0.92rem]">
+        <span id="navIndicator"></span>
+        <button class="nav-link text-emerald-700" data-nav="home">Home</button>
+        <button class="nav-link text-emerald-700" data-nav="test">Tes</button>
+        <button class="nav-link text-emerald-700" data-nav="history">Riwayat</button>
+        <button class="nav-link text-emerald-700" data-nav="about">Tentang</button>
+
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="max-w-6xl mx-auto px-4 py-10 space-y-14 relative">
+    <div class="gradient-blob blob-1"></div>
+    <div class="gradient-blob blob-2"></div>
+
+    <!-- Home -->
+    <section id="homeSection" class="page-section active space-y-10 relative">
+      <div class="grid md:grid-cols-2 items-center gap-10">
+        <div class="space-y-6">
+          <div class="inline-flex items-center gap-2 text-xs font-medium bg-emerald-50 text-emerald-700 px-3 py-1 rounded-full border border-emerald-100 shadow-sm">
+            <span class="text-[0.8rem]">💚</span> Mental Health Check-in · 3 menit
+          </div>
+          <h1 class="text-3xl md:text-4xl font-extrabold leading-tight text-emerald-950">
+            Jaga <span class="text-rose-400">hatimu</span>, jaga <span class="text-emerald-600">kesehatan mentalmu.</span>
+          </h1>
+          <p class="text-sm sm:text-base text-emerald-900/80 leading-relaxed">
+            Tes singkat ini membantumu berhenti sejenak, mengamati apa yang kamu rasakan, dan
+            mendapatkan saran ringan. Anonim, gratis, dan mendukung tujuan
+            <span class="font-semibold">SDG 3: Good Health & Well-Being</span>.
+          </p>
+
+          <div class="flex flex-wrap gap-3">
+            <button
+              data-nav="test"
+              class="btn-main bg-gradient-to-br from-emerald-500 to-emerald-600 text-white"
+            >
+              <span>Mulai Tes Sekarang</span>
+              <span>➜</span>
+            </button>
+            <button
+              data-nav="about"
+              class="btn-main bg-white text-emerald-800 border border-emerald-100 shadow-sm"
+            >
+              Pelajari SDG&nbsp;3
+            </button>
+          </div>
+
+          <div class="flex items-center gap-3 text-xs sm:text-sm text-emerald-900/80">
+            <span class="badge bg-emerald-100 text-emerald-800 border border-emerald-200">Edukasi</span>
+            <span class="badge bg-rose-100 text-rose-700 border border-rose-200 flex items-center gap-1">
+              <span>♥</span> Peduli diri
+            </span>
+            <span class="badge bg-sky-100 text-sky-800 border border-sky-200">Anonim & Gratis</span>
+          </div>
+        </div>
+
+        <!-- Heart illustration -->
+        <div class="relative">
+          <div class="heart-wrapper">
+            <div class="heart-bg"></div>
+            <div class="heart-main">
+              <svg class="heart-svg" viewBox="0 0 120 110">
+                <defs>
+                  <linearGradient id="heartGradient" x1="0" x2="1" y1="0" y2="1">
+                    <stop offset="0" stop-color="#fb7185"/>
+                    <stop offset="1" stop-color="#f97316"/>
+                  </linearGradient>
+                </defs>
+                <path
+                  d="M60 100C60 100 12 72 12 40C12 24 24 12 40 12C50 12 57 18 60 24C63 18 70 12 80 12C96 12 108 24 108 40C108 72 60 100 60 100Z"
+                  fill="url(#heartGradient)"
+                  stroke="#fecaca"
+                  stroke-width="3"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M46 30C42 26 36 26 32 30"
+                  stroke="#fee2e2"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </div>
+
+            <span class="heart-particle"></span>
+            <span class="heart-particle"></span>
+            <span class="heart-particle"></span>
+            <span class="heart-particle"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Info cards -->
+      <div class="grid md:grid-cols-3 gap-6">
+       <div class="card bg-emerald-50/80 border border-emerald-200 p-6 relative overflow-hidden">
+          <div class="absolute -right-3 -top-3 text-2xl opacity-10">①</div>
+          <h3 class="font-semibold mb-1 text-emerald-900">Deskripsi</h3>
+          <p class="text-sm text-emerald-900/80">
+            Kuesioner singkat (20 item) skala 0–3 untuk refleksi diri. Bukan alat diagnosis medis,
+            tapi pintu awal untuk lebih sadar kondisi emosionalmu.
+          </p>
+        </div>
+        <div class="card bg-white/90 border border-emerald-100 p-6 relative overflow-hidden">
+          <div class="absolute -right-3 -top-3 text-2xl opacity-10">②</div>
+          <h3 class="font-semibold mb-1 text-emerald-900">Cara Kerja</h3>
+          <p class="text-sm text-emerald-900/80">
+            Jawab sesuai kondisi pekan ini. Sistem menghitung skor total, mengelompokkan kategori,
+            dan memberi saran singkat.
+          </p>
+        </div>
+        <div class="card bg-white/90 border border-emerald-100 p-6 relative overflow-hidden">
+          <div class="absolute -right-3 -top-3 text-2xl opacity-10">③</div>
+          <h3 class="font-semibold mb-1 text-emerald-900">Privasi</h3>
+          <p class="text-sm text-emerald-900/80">
+            Data tersimpan lokal di peramban (LocalStorage/Cache). Kamu bisa hapus riwayat kapan saja dari menu Riwayat.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Test -->
+    <section id="testSection" class="page-section hidden max-w-3xl mx-auto">
+      <div class="card bg-white/95 border border-emerald-100 p-6 md:p-8 space-y-6 relative overflow-hidden">
+        <div class="absolute -right-16 -top-10 w-44 h-44 bg-emerald-100 rounded-full opacity-40 blur-3xl"></div>
+        <div class="flex items-center justify-between relative z-10">
+          <div>
+            <h2 class="text-xl font-semibold text-emerald-950 flex items-center gap-2">
+              <span>Tes Kesehatan Mental</span>
+              <span class="text-rose-500 text-lg">♥</span>
+            </h2>
+            <div class="text-xs text-emerald-900/70 mt-1">
+              Jawab jujur untuk dirimu sendiri. Tidak ada jawaban benar atau salah.
+            </div>
+          </div>
+          <div class="text-xs text-emerald-900/70">
+            Pertanyaan <span id="stepText">1</span>/20
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-4 relative z-10">
+          <div>
+            <label class="text-sm text-emerald-900/90">Nama (opsional)</label>
+            <input
+              id="nameInput"
+              class="mt-1 w-full border border-emerald-100 rounded-xl px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-300 focus:border-emerald-300 bg-emerald-50/80"
+              placeholder="Nama kamu atau boleh dikosongkan"
+            />
+          </div>
+          <div>
+            <label class="text-sm text-emerald-900/90">Catatan hari ini (opsional)</label>
+            <input
+              id="noteInput"
+              class="mt-1 w-full border border-emerald-100 rounded-xl px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-300 focus:border-emerald-300 bg-emerald-50/80"
+              placeholder="Perasaan singkat hari ini"
+            />
+          </div>
+        </div>
+
+        <div class="w-full h-1.5 bg-emerald-50 rounded-full overflow-hidden relative z-10">
+          <div id="progress" class="h-full bg-gradient-to-r from-emerald-500 to-emerald-400 w-0 transition-all duration-300 ease-out"></div>
+        </div>
+
+        <div id="questionCard" class="space-y-4 relative z-10">
+          <p id="questionText" class="text-lg font-medium text-emerald-950"></p>
+          <div class="grid sm:grid-cols-4 gap-2 text-sm">
+            <label class="flex items-center gap-2 border border-emerald-100 rounded-xl px-3 py-2 cursor-pointer bg-emerald-50/60 hover:border-emerald-300 hover:bg-emerald-50">
+              <input type="radio" name="scale" value="0" class="text-emerald-500" />
+              <span>0 Tidak Pernah</span>
+            </label>
+            <label class="flex items-center gap-2 border border-emerald-100 rounded-xl px-3 py-2 cursor-pointer bg-emerald-50/60 hover:border-emerald-300 hover:bg-emerald-50">
+              <input type="radio" name="scale" value="1" class="text-emerald-500" />
+              <span>1 Jarang</span>
+            </label>
+            <label class="flex items-center gap-2 border border-emerald-100 rounded-xl px-3 py-2 cursor-pointer bg-emerald-50/60 hover:border-emerald-300 hover:bg-emerald-50">
+              <input type="radio" name="scale" value="2" class="text-emerald-500" />
+              <span>2 Sering</span>
+            </label>
+            <label class="flex items-center gap-2 border border-emerald-100 rounded-xl px-3 py-2 cursor-pointer bg-emerald-50/60 hover:border-emerald-300 hover:bg-emerald-50">
+              <input type="radio" name="scale" value="3" class="text-emerald-500" />
+              <span>3 Sangat Sering</span>
+            </label>
+          </div>
+          <p class="text-xs text-emerald-900/70">
+            Tips: nilai berdasarkan kondisi minggu ini, bukan hanya hari ini.
+          </p>
+        </div>
+
+        <div class="flex items-center justify-between pt-2 relative z-10">
+          <button id="prevBtn" class="px-4 py-2 rounded-xl border border-emerald-100 text-sm text-emerald-900/80 bg-white/80 hover:bg-emerald-50">
+            ⬅ Kembali
+          </button>
+          <button id="nextBtn" class="px-4 py-2 rounded-xl text-sm text-white bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-500 shadow-md">
+            Berikutnya ➜
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Result -->
+    <section id="resultSection" class="page-section hidden max-w-3xl mx-auto">
+      <div class="card bg-white/95 border border-emerald-100 p-6 md:p-8 space-y-6">
+        <div class="flex items-center justify-between gap-3">
+          <h2 class="text-xl font-semibold text-emerald-950 flex items-center gap-2">
+            <span>Hasil Refleksi</span>
+            <span class="text-rose-500 text-lg">♥</span>
+          </h2>
+          <div class="text-xs text-emerald-900/70">Hanya kamu yang bisa melihat hasil ini.</div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-5">
+          <div class="bg-emerald-50/80 border border-emerald-100 rounded-2xl p-4 space-y-2">
+            <div class="text-xs text-emerald-900/80">Nama</div>
+            <div class="text-sm font-semibold text-emerald-950" id="resName">-</div>
+
+            <div class="mt-3 text-xs text-emerald-900/80">Skor total</div>
+            <div class="text-3xl font-extrabold text-emerald-700">
+              <span id="resScore">0</span>
+              <span class="text-base text-emerald-900/60"> / <span id="resMax">60</span></span>
+            </div>
+
+            <div class="mt-2 text-xs text-emerald-900/80">Kategori</div>
+            <div class="text-sm font-semibold" id="resCategory"></div>
+          </div>
+
+          <div class="bg-white border border-emerald-100 rounded-2xl p-4 space-y-2">
+            <div class="text-xs text-emerald-900/80">Saran</div>
+            <div id="resAdvice" class="text-sm text-emerald-900/90 leading-relaxed"></div>
+            <p class="text-[0.7rem] text-emerald-900/70 border-t border-emerald-100 pt-2">
+              Jika merasa sangat kewalahan (misalnya sulit berfungsi dalam aktivitas sehari-hari, muncul pikiran menyakiti diri, atau distress berkepanjangan),
+              pertimbangkan untuk berkonsultasi dengan profesional kesehatan mental.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap gap-3">
+          <button data-nav="test" id="restartBtn" class="px-4 py-2 rounded-xl border border-emerald-100 text-sm bg-white hover:bg-emerald-50">
+            Ulangi Tes
+          </button>
+          <button data-nav="history" class="px-4 py-2 rounded-xl text-sm text-white bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-500 shadow-md">
+            Lihat Riwayat
+          </button>
+        </div>
+
+        <p class="text-[0.7rem] text-emerald-900/70">
+          Disclaimer: Hasil ini bersifat edukatif dan tidak dapat menggantikan diagnosis atau rekomendasi dari psikolog/psikiater.
+        </p>
+      </div>
+    </section>
+
+    <!-- History -->
+    <section id="historySection" class="page-section hidden space-y-6">
+      <div class="grid md:grid-cols-[2fr_1fr] gap-6">
+        <div class="card bg-white/95 border border-emerald-100 p-6">
+          <div class="flex items-center justify-between mb-4 gap-3">
+            <h3 class="font-semibold text-emerald-950 flex items-center gap-2">
+              <span>Riwayat Tes</span>
+              <span class="text-xs text-emerald-900/70">(terbaru di atas)</span>
+            </h3>
+            <div class="flex flex-wrap gap-2">
+              <button id="exportCsv" class="px-3 py-1.5 rounded-xl border border-emerald-100 text-xs bg-white hover:bg-emerald-50">
+                Ekspor CSV
+              </button>
+              <button id="clearAll" class="px-3 py-1.5 rounded-xl border border-rose-200 text-xs text-rose-600 bg-rose-50/70 hover:bg-rose-100">
+                Hapus Semua
+              </button>
+            </div>
+          </div>
+          <div class="overflow-x-auto">
+            <table class="min-w-full text-xs sm:text-sm">
+              <thead class="text-left text-emerald-900/80 bg-emerald-50">
+                <tr>
+                  <th class="py-2 px-2">Tanggal</th>
+                  <th class="py-2 px-2">Nama</th>
+                  <th class="py-2 px-2">Skor</th>
+                  <th class="py-2 px-2">Kategori</th>
+                  <th class="py-2 px-2">Catatan</th>
+                </tr>
+              </thead>
+              <tbody id="historyBody"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="space-y-6">
+          <div class="card bg-white/95 border border-emerald-100 p-6">
+            <h3 class="font-semibold mb-3 text-emerald-950">Statistik</h3>
+            <ul id="statsList" class="text-sm text-emerald-900/90 space-y-1"></ul>
+          </div>
+          <div class="card bg-white/95 border border-emerald-100 p-6">
+            <h3 class="font-semibold mb-3 text-emerald-950">Tren Skor</h3>
+            <canvas id="trendCanvas" width="400" height="220" class="w-full"></canvas>
+            <p class="text-[0.7rem] text-emerald-900/70 mt-2">
+              Batang hijau menunjukkan skor dari waktu ke waktu (maksimal 10 entri terakhir).
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="aboutSection" class="page-section hidden max-w-3xl mx-auto">
+      <div class="card bg-white/95 border border-emerald-100 p-6 md:p-8 space-y-4">
+        <h2 class="text-xl font-semibold text-emerald-950 flex items-center gap-2">
+          <span>Tentang Proyek & SDG 3</span>
+          <span class="text-rose-500 text-lg">♥</span>
+        </h2>
+        <p class="text-sm sm:text-base text-emerald-900/90 leading-relaxed">
+          Aplikasi ini mendukung tujuan Sustainable Development Goal (SDG) 3: Good Health and Well-Being,
+          khususnya pada aspek kesehatan mental.
+        </p>
+        <p class="text-sm sm:text-base text-emerald-900/90 leading-relaxed">
+          Tampilan dan animasi dirancang ramah pengguna untuk mendorong refleksi diri dan kebiasaan mencari dukungan.
+        </p>
+        <p class="text-xs text-emerald-900/70">
+          Catatan: Tidak ada data dikirim ke server. Riwayat tersimpan lokal di peramban dan bisa dihapus kapan saja.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="text-center text-[0.7rem] text-emerald-900/80 bg-emerald-50 py-6">
+    © 2025 · Edukatif & non-diagnostik
+  </footer>
+
+  <!-- WASM wrapper + app logic -->
+  <script src="scorer.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
